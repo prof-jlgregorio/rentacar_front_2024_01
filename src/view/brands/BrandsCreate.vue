@@ -29,6 +29,10 @@
 import apiUrl from '@/config/api'
 import { reactive } from 'vue'
 import axios from 'axios'
+import { useRouter } from 'vue-router'
+
+//cria a instância do roteador
+const router = useRouter()
 
 // objeto reativo para capturar os dados do usuário
 const brand = reactive({
@@ -42,6 +46,7 @@ const create = async () => {
     .post(apiUrl + '/api/brands', brand)
     .then(response => {
       alert('Dados cadastrados com sucesso!')
+      router.push('/brands')
     })
     .catch(error => {
       alert('Erro ao cadastrar')
