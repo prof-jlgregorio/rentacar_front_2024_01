@@ -7,6 +7,7 @@ import BrandsIndex from '@/view/brands/BrandsIndex.vue'
 import BrandsCreate from '@/view/brands/BrandsCreate.vue'
 
 import CarsIndex from '@/view/cars/CarsIndex.vue'
+import BrandsUpdate from '@/view/brands/BrandsUpdate.vue'
 
 const routes = [
   {
@@ -23,6 +24,11 @@ const routes = [
     path: '/brands/create',
     name: 'BrandsCreate',
     component: BrandsCreate,
+  },
+  {
+    path: '/brands/:id',
+    name: 'BrandsUpdate',
+    component: BrandsUpdate,
   },
   {
     path: '/cars',
